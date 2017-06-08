@@ -1,6 +1,7 @@
 <?php
 namespace Famo\AnnuaireFamo\Domain\Model;
 
+
 /***************************************************************
  *
  *  Copyright notice
@@ -28,7 +29,7 @@ namespace Famo\AnnuaireFamo\Domain\Model;
  ***************************************************************/
 
 /**
- * Fonction
+ * Position
  */
 class Position extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {

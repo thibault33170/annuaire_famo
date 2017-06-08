@@ -308,32 +308,6 @@ class ContactTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	/**
 	 * @test
 	 */
-	public function getPositionReturnsInitialValueForPosition()
-	{
-		$this->assertEquals(
-			NULL,
-			$this->subject->getPosition()
-		);
-	}
-
-	/**
-	 * @test
-	 */
-	public function setPositionForPositionSetsPosition()
-	{
-		$positionFixture = new \Famo\AnnuaireFamo\Domain\Model\Position();
-		$this->subject->setPosition($positionFixture);
-
-		$this->assertAttributeEquals(
-			$positionFixture,
-			'position',
-			$this->subject
-		);
-	}
-
-	/**
-	 * @test
-	 */
 	public function getDepartmentReturnsInitialValueForDepartment()
 	{
 		$this->assertEquals(
@@ -353,6 +327,32 @@ class ContactTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 		$this->assertAttributeEquals(
 			$departmentFixture,
 			'department',
+			$this->subject
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function getPositionReturnsInitialValueForPosition()
+	{
+		$this->assertEquals(
+			NULL,
+			$this->subject->getPosition()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setPositionForPositionSetsPosition()
+	{
+		$positionFixture = new \Famo\AnnuaireFamo\Domain\Model\Position();
+		$this->subject->setPosition($positionFixture);
+
+		$this->assertAttributeEquals(
+			$positionFixture,
+			'position',
 			$this->subject
 		);
 	}

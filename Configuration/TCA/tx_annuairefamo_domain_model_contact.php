@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'lastname,firstname,phone,email,address,zipcode,city,picture,presentation,organization,position,department,',
+		'searchFields' => 'lastname,firstname,phone,email,address,zipcode,city,picture,presentation,organization,department,position,',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('annuaire_famo') . 'Resources/Public/Icons/tx_annuairefamo_domain_model_contact.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, phone, email, address, zipcode, city, picture, presentation, organization, position, department',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, lastname, firstname, phone, email, address, zipcode, city, picture, presentation, organization, department, position',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, lastname, firstname, phone, email, address, zipcode, city, picture, presentation, organization, position, department, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, lastname, firstname, phone, email, address, zipcode, city, picture, presentation, organization, department, position, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -247,17 +247,6 @@ return array(
 				'maxitems' => 1,
 			),
 		),
-		'position' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:annuaire_famo/Resources/Private/Language/locallang_db.xlf:tx_annuairefamo_domain_model_contact.position',
-			'config' => array(
-				'type' => 'select',
-				'renderType' => 'selectSingle',
-				'foreign_table' => 'tx_annuairefamo_domain_model_position',
-				'minitems' => 0,
-				'maxitems' => 1,
-			),
-		),
 		'department' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:annuaire_famo/Resources/Private/Language/locallang_db.xlf:tx_annuairefamo_domain_model_contact.department',
@@ -265,6 +254,17 @@ return array(
 				'type' => 'select',
 				'renderType' => 'selectSingle',
 				'foreign_table' => 'tx_annuairefamo_domain_model_department',
+				'minitems' => 0,
+				'maxitems' => 1,
+			),
+		),
+		'position' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:annuaire_famo/Resources/Private/Language/locallang_db.xlf:tx_annuairefamo_domain_model_contact.position',
+			'config' => array(
+				'type' => 'select',
+				'renderType' => 'selectSingle',
+				'foreign_table' => 'tx_annuairefamo_domain_model_position',
 				'minitems' => 0,
 				'maxitems' => 1,
 			),

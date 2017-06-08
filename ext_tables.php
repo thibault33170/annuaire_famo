@@ -37,8 +37,8 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignat
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_annuairefamo_domain_model_organization', 'EXT:annuaire_famo/Resources/Private/Language/locallang_csh_tx_annuairefamo_domain_model_organization.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_annuairefamo_domain_model_organization');
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_annuairefamo_domain_model_position', 'EXT:annuaire_famo/Resources/Private/Language/locallang_csh_tx_annuairefamo_domain_model_position.xlf');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_annuairefamo_domain_model_position');
-
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_annuairefamo_domain_model_department', 'EXT:annuaire_famo/Resources/Private/Language/locallang_csh_tx_annuairefamo_domain_model_department.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_annuairefamo_domain_model_department');
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_annuairefamo_domain_model_position', 'EXT:annuaire_famo/Resources/Private/Language/locallang_csh_tx_annuairefamo_domain_model_position.xlf');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_annuairefamo_domain_model_position');

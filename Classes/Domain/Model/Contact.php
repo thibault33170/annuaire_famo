@@ -106,18 +106,18 @@ class Contact extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $organization = null;
     
     /**
-     * position
-     *
-     * @var \Famo\AnnuaireFamo\Domain\Model\Position
-     */
-    protected $position = null;
-    
-    /**
      * department
      *
      * @var \Famo\AnnuaireFamo\Domain\Model\Department
      */
     protected $department = null;
+    
+    /**
+     * position
+     *
+     * @var \Famo\AnnuaireFamo\Domain\Model\Position
+     */
+    protected $position = null;
     
     /**
      * Returns the lastname
@@ -375,7 +375,7 @@ class Contact extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the position
      *
-     * @return \Famo\AnnuaireFamo\Domain\Model\Position position
+     * @return \Famo\AnnuaireFamo\Domain\Model\Position $position
      */
     public function getPosition()
     {

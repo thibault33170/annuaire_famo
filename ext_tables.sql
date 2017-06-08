@@ -16,8 +16,8 @@ CREATE TABLE tx_annuairefamo_domain_model_contact (
 	picture int(11) unsigned NOT NULL default '0',
 	presentation text NOT NULL,
 	organization int(11) unsigned DEFAULT '0',
-	position int(11) unsigned DEFAULT '0',
 	department int(11) unsigned DEFAULT '0',
+	position int(11) unsigned DEFAULT '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -98,15 +98,18 @@ CREATE TABLE tx_annuairefamo_domain_model_organization (
 );
 
 #
-# Table structure for table 'tx_annuairefamo_domain_model_position'
+# Table structure for table 'tx_annuairefamo_domain_model_department'
 #
-CREATE TABLE tx_annuairefamo_domain_model_position (
+CREATE TABLE tx_annuairefamo_domain_model_department (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	wording varchar(255) DEFAULT '' NOT NULL,
-	in_charge tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	building varchar(255) DEFAULT '' NOT NULL,
+	office varchar(255) DEFAULT '' NOT NULL,
+	phone varchar(255) DEFAULT '' NOT NULL,
+	schedule varchar(255) DEFAULT '' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -138,18 +141,15 @@ CREATE TABLE tx_annuairefamo_domain_model_position (
 );
 
 #
-# Table structure for table 'tx_annuairefamo_domain_model_department'
+# Table structure for table 'tx_annuairefamo_domain_model_position'
 #
-CREATE TABLE tx_annuairefamo_domain_model_department (
+CREATE TABLE tx_annuairefamo_domain_model_position (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	wording varchar(255) DEFAULT '' NOT NULL,
-	building varchar(255) DEFAULT '' NOT NULL,
-	office varchar(255) DEFAULT '' NOT NULL,
-	phone varchar(255) DEFAULT '' NOT NULL,
-	schedule varchar(255) DEFAULT '' NOT NULL,
+	in_charge tinyint(1) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

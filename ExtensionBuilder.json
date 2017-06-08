@@ -4,7 +4,7 @@
             "config": {
                 "position": [
                     780,
-                    34
+                    33.599998474121
                 ]
             },
             "name": "New Model Object",
@@ -144,20 +144,20 @@
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
-                            "relationName": "position",
+                            "relationName": "department",
                             "relationType": "manyToOne",
                             "relationWire": "[wired]",
-                            "uid": "1405027833782"
+                            "uid": "903355015777"
                         },
                         {
                             "foreignRelationClass": "",
                             "lazyLoading": false,
                             "propertyIsExcludeField": true,
                             "relationDescription": "",
-                            "relationName": "department",
+                            "relationName": "position",
                             "relationType": "manyToOne",
                             "relationWire": "[wired]",
-                            "uid": "903355015777"
+                            "uid": "157623605490"
                         }
                     ]
                 }
@@ -167,7 +167,7 @@
             "config": {
                 "position": [
                     38,
-                    341
+                    340.59999847412
                 ]
             },
             "name": "New Model Object",
@@ -320,68 +320,8 @@
         {
             "config": {
                 "position": [
-                    299,
-                    359
-                ]
-            },
-            "name": "New Model Object",
-            "value": {
-                "actionGroup": {
-                    "_default0_list": false,
-                    "_default1_show": false,
-                    "_default2_new_create": false,
-                    "_default3_edit_update": false,
-                    "_default4_delete": false,
-                    "customActions": []
-                },
-                "name": "Position",
-                "objectsettings": {
-                    "addDeletedField": true,
-                    "addHiddenField": true,
-                    "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": false,
-                    "categorizable": false,
-                    "description": "",
-                    "mapToTable": "",
-                    "parentClass": "",
-                    "sorting": false,
-                    "type": "Entity",
-                    "uid": "1368743367222"
-                },
-                "propertyGroup": {
-                    "properties": [
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": true,
-                            "propertyName": "wording",
-                            "propertyType": "String",
-                            "uid": "561038028139"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "inCharge",
-                            "propertyType": "Boolean",
-                            "uid": "565192685660"
-                        }
-                    ]
-                },
-                "relationGroup": {
-                    "relations": []
-                }
-            }
-        },
-        {
-            "config": {
-                "position": [
                     541,
-                    399
+                    398.59999847412
                 ]
             },
             "name": "New Model Object",
@@ -466,6 +406,66 @@
                     "relations": []
                 }
             }
+        },
+        {
+            "config": {
+                "position": [
+                    294,
+                    73.599998474121
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Position",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1129570774754"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": true,
+                            "propertyName": "wording",
+                            "propertyType": "String",
+                            "uid": "1203051555302"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "inCharge",
+                            "propertyType": "Boolean",
+                            "uid": "1147772326180"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
         }
     ],
     "properties": {
@@ -536,11 +536,11 @@
         {
             "src": {
                 "moduleId": 0,
-                "terminal": "relationWire_2",
+                "terminal": "relationWire_1",
                 "uid": "903355015777"
             },
             "tgt": {
-                "moduleId": 3,
+                "moduleId": 2,
                 "terminal": "SOURCES",
                 "uid": "859279307236"
             }
@@ -560,18 +560,18 @@
         {
             "src": {
                 "moduleId": 0,
-                "terminal": "relationWire_1",
-                "uid": "1405027833782"
+                "terminal": "relationWire_2",
+                "uid": "157623605490"
             },
             "tgt": {
-                "moduleId": 2,
+                "moduleId": 3,
                 "terminal": "SOURCES",
-                "uid": "1368743367222"
+                "uid": "1129570774754"
             }
         }
     ],
     "log": {
-        "last_modified": "2017-06-08 02:56",
+        "last_modified": "2017-06-08 03:43",
         "extension_builder_version": "7.6.0",
         "be_user": " (1)"
     }

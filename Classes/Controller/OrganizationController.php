@@ -34,6 +34,14 @@ class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
 {
 
     /**
+     * organizationRepository
+     *
+     * @var \Famo\AnnuaireFamo\Domain\Repository\OrganizationRepository
+     * @inject
+     */
+    protected $organizationRepository = NULL;
+
+    /**
      * action list
      *
      * @return void

@@ -17,41 +17,21 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:flashMessages />
 
-<table  class="tx_annuairefamo" >
-	<tr>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.business_name" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.address" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.zipcode" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.city" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.phone" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.fax" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.email" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.description" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.siret" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.logo" /></th>
-		<th><f:translate key="tx_annuairefamo_domain_model_organization.schedule" /></th>
-		<th> </th>
-		<th> </th>
-	</tr>
+	<div class="row">
+		<f:for each="{organizations}" as="organization">
+			<div class="col-sm-6">
+				<div class="panel">
+					<div class="row">
+						<div class="col-sm-4">
+							<f:image image="{organization.logo}" width="60"/>
+						</div>
+						<div class="col-sm-8">
+							<f:link.action action="show" arguments="{organization : organization}"> {organization.businessName}</f:link.action>
+						</div>
+					</div>
+				</div>
+			</div>
+		</f:for>
+	</div>
 
-	<f:for each="{organizations}" as="organization">
-		<tr>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.businessName}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.address}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.zipcode}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.city}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.phone}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.fax}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.email}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.description}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.siret}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.logo.originalResource.name}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{organization : organization}"> {organization.schedule}</f:link.action></td>
-			<td><f:link.action action="edit" arguments="{organization : organization}">Edit</f:link.action></td>
-			<td><f:link.action action="delete" arguments="{organization : organization}">Delete</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
-
-<f:link.action action="new">New Organization</f:link.action>
 </f:section>

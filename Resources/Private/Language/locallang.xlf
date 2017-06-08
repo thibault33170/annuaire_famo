@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-06-08T14:56:47Z" product-name="annuaire_famo">
+		<header/>
+		<body>
+			<trans-unit id="tx_annuairefamo_domain_model_contact">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.lastname">
+				<source>Lastname</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.firstname">
+				<source>Firstname</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.zipcode">
+				<source>Zipcode</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.picture">
+				<source>Picture</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.presentation">
+				<source>Presentation</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.organization">
+				<source>Organization</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_contact.department">
+				<source>Department</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization">
+				<source>Organization</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.business_name">
+				<source>Business Name</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.zipcode">
+				<source>Zipcode</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.siret">
+				<source>Siret</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_organization.schedule">
+				<source>Schedule</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_position.wording">
+				<source>Wording</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_position.in_charge">
+				<source>In Charge</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_department">
+				<source>Department</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_department.wording">
+				<source>Wording</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_department.building">
+				<source>Building</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_department.office">
+				<source>Office</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_department.phone">
+				<source>Phone</source>
+			</trans-unit>
+			<trans-unit id="tx_annuairefamo_domain_model_department.schedule">
+				<source>Schedule</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

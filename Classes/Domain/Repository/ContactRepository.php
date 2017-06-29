@@ -33,5 +33,15 @@ namespace Famo\AnnuaireFamo\Domain\Repository;
 class ContactRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
 
-    
+    /**
+     * Effectue une recherche dans les contacts en filtrant par $search
+     *
+     * @param string $search
+     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     */
+    public function findBySearch ($search) {
+        $query = $this->createQuery();
+        $query->matching($query->like('firstname', '%'.$search.'%'));
+        return $query->execute();
+    }
 }

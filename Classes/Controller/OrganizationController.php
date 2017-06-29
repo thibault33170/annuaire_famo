@@ -32,7 +32,6 @@ namespace Famo\AnnuaireFamo\Controller;
  */
 class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-
     /**
      * organizationRepository
      *
@@ -40,6 +39,14 @@ class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      * @inject
      */
     protected $organizationRepository = NULL;
+
+    /**
+     * contactRepository
+     *
+     * @var \Famo\AnnuaireFamo\Domain\Repository\ContactRepository
+     * @inject
+     */
+    protected $contactRepository = NULL;
 
     /**
      * action list
@@ -60,6 +67,9 @@ class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      */
     public function showAction(\Famo\AnnuaireFamo\Domain\Model\Organization $organization)
     {
+        $contacts = $this->contactRepository->getContacts($organization);
+
+        $this->view->assign('contacts', $contacts);
         $this->view->assign('organization', $organization);
     }
     

@@ -44,4 +44,18 @@ class ContactRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query->matching($query->like('firstname', '%'.$search.'%'));
         return $query->execute();
     }
+
+    /**
+     * Return all the contacts of the $organization
+     *
+     * @param \Famo\AnnuaireFamo\Domain\Model\Organization $organization
+     * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     */
+    function getContacts(\Famo\AnnuaireFamo\Domain\Model\Organization $organization)
+    {
+        $query = $this->createQuery();
+        $query->matching($query->equals('organization', $organization));
+
+        return $query->execute();
+    }
 }

@@ -39,9 +39,30 @@ class ContactRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      * @param string $search
      * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
      */
-    public function findBySearch ($search) {
+    public function findBySearch($search)
+    {
         $query = $this->createQuery();
-        $query->matching($query->like('firstname', '%'.$search.'%'));
+        $constraints = array();
+
+        if (preg_match('/\s/', $search)) {
+            $search = explode(' ', $search);
+            $constraints[] = $query->logicalOr(
+                $query->logicalAnd(
+                    $query->like('firstname', '%' . $search[0] . '%'),
+                    $query->like('lastname', '%' . $search[1] . '%')
+                ),
+                $query->logicalAnd(
+                    $query->like('firstname', '%' . $search[1] . '%'),
+                    $query->like('lastname', '%' . $search[0] . '%')
+                )
+            );
+        } else {
+            $constraints[] = $query->logicalOr(
+                $query->like('firstname', '%' . $search . '%'),
+                $query->like('lastname', '%' . $search . '%')
+            );
+        }
+        $query->matching($query->logicalAnd($constraints));
         return $query->execute();
     }
 }

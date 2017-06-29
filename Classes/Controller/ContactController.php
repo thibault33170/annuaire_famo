@@ -40,15 +40,21 @@ class ContactController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * @inject
      */
     protected $contactRepository = NULL;
-    
+
     /**
      * action list
      *
+     * @param \Famo\AnnuaireFamo\Query\ContactSearch $search
      * @return void
      */
-    public function listAction()
+    public function listAction(\Famo\AnnuaireFamo\Query\ContactSearch $search = null)
     {
-        $contacts = $this->contactRepository->findAll();
+        if ($search === null) {
+            $contacts = $this->contactRepository->findAll();
+        } else {
+            $contacts = $this->contactRepository->findBySearch($search->getTerms());
+        }
+
         $this->view->assign('contacts', $contacts);
     }
     

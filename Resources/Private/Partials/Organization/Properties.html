@@ -1,90 +1,91 @@
-<table class="tx-annuaire-famo" >
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.business_name" />
-		</td>
-		<td>
-		{organization.businessName}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.address" />
-		</td>
-		<td>
-		{organization.address}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.zipcode" />
-		</td>
-		<td>
-		{organization.zipcode}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.city" />
-		</td>
-		<td>
-		{organization.city}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.phone" />
-		</td>
-		<td>
-		{organization.phone}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.fax" />
-		</td>
-		<td>
-		{organization.fax}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.email" />
-		</td>
-		<td>
-		{organization.email}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.description" />
-		</td>
-		<td>
-		{organization.description}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.siret" />
-		</td>
-		<td>
-		{organization.siret}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.logo" />
-		</td>
-		<td>
-				<f:image src="{organization.logo.originalResource.publicUrl}" width="200"/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_organization.schedule" />
-		</td>
-		<td>
-		{organization.schedule}
-		</td>
-	</tr>
-</table>
+<ul class="tx-annuaire-famo">
+    <f:if condition="{organization.businessName}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.business_name"/>
+                : {organization.businessName}
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.address}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.address"/>
+                : {organization.address}
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.zipcode}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.zipcode"/>
+                : {organization.zipcode}
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.city}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.city"/>
+                : {organization.city}
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.phone}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.phone"/>
+                : {organization.phone}
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.fax}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.fax"/>
+                : {organization.fax}
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.email}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.email"/>
+                : {organization.email}
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.description}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.description"/>
+                : {organization.description}
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.siret}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.siret"/>
+                : {organization.siret}
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.logo}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.logo"/>
+                :
+                <f:image src="{organization.logo.originalResource.publicUrl}" width="200"/>
+            </li>
+        </f:then>
+    </f:if>
+    <f:if condition="{organization.schedule}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_organization.schedule"/>
+                : {organization.schedule}
+            </li>
+        </f:then>
+    </f:if>
+</ul>

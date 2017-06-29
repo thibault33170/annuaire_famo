@@ -1,75 +1,83 @@
+<ul class="tx-annuaire-famo">
+    <f:if condition="{contact.firstname}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_contact.firstname"/>
+                : {contact.firstname}
+            </li>
+        </f:then>
+    </f:if>
 
-<table class="tx-annuaire-famo" >
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_contact.lastname" />
-		</td>
-		<td>
-		{contact.lastname}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_contact.firstname" />
-		</td>
-		<td>
-		{contact.firstname}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_contact.phone" />
-		</td>
-		<td>
-		{contact.phone}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_contact.email" />
-		</td>
-		<td>
-		{contact.email}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_contact.address" />
-		</td>
-		<td>
-		{contact.address}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_contact.zipcode" />
-		</td>
-		<td>
-		{contact.zipcode}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_contact.city" />
-		</td>
-		<td>
-		{contact.city}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_contact.picture" />
-		</td>
-		<td>
-				<f:image src="{contact.picture.originalResource.publicUrl}" width="200"/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_annuairefamo_domain_model_contact.presentation" />
-		</td>
-		<td>
-		{contact.presentation}
-		</td>
-	</tr>
-</table>
+    <f:if condition="{contact.lastname}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_contact.lastname"/>
+                : {contact.lastname}
+            </li>
+        </f:then>
+    </f:if>
+
+    <f:if condition="{contact.phone}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_contact.phone"/>
+                : {contact.phone}
+            </li>
+        </f:then>
+    </f:if>
+
+    <f:if condition="{contact.email}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_contact.email"/>
+                : {contact.email}
+            </li>
+        </f:then>
+    </f:if>
+
+    <f:if condition="{contact.address}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_contact.address"/>
+                : {contact.address}
+            </li>
+        </f:then>
+    </f:if>
+
+    <f:if condition="{contact.zipcode}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_contact.zipcode"/>
+                : {contact.zipcode}
+            </li>
+        </f:then>
+    </f:if>
+
+    <f:if condition="{contacts}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_contact.city"/>
+                : {contact.city}
+            </li>
+        </f:then>
+    </f:if>
+
+    <f:if condition="{contact.picture}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_contact.picture"/>
+                :
+                <f:image src="{contact.picture.originalResource.publicUrl}" width="200"/>
+            </li>
+        </f:then>
+    </f:if>
+
+    <f:if condition="{contact.presentation}">
+        <f:then>
+            <li>
+                <f:translate key="tx_annuairefamo_domain_model_contact.presentation"/>
+                : {contact.presentation}
+            </li>
+        </f:then>
+    </f:if>
+</ul>

@@ -1,18 +1,25 @@
 <div class="row">
-    <f:for each="{contacts}" as="contact">
-        <div class="col-sm-6">
-            <div class="panel">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <f:image image="{contact.picture}" height="50"/>
-                    </div>
-                    <div class="col-sm-8">
-                        <f:link.action pageUid="{settings.pagecontact}" controller="Contact" action="show" style="line-height: 50px;" arguments="{contact : contact}">{contact.lastname}
-                            {contact.firstname}
-                        </f:link.action>
+    <f:if condition="{contacts}">
+        <f:then>
+            <f:for each="{contacts}" as="contact">
+                <div class="col-sm-6">
+                    <div class="panel">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <f:image image="{contact.picture}" height="50"/>
+                            </div>
+                            <div class="col-sm-8">
+                                <f:link.action pageUid="{settings.pagecontact}" controller="Contact" action="show" style="line-height: 50px;" arguments="{contact : contact}">{contact.lastname}
+                                    {contact.firstname}
+                                </f:link.action>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </f:for>
+            </f:for>
+        </f:then>
+        <f:else>
+            Unknown contact. Please try again.
+        </f:else>
+    </f:if>
 </div>
